@@ -54,7 +54,7 @@
                                 <td>{{$customer->address}}</td>
                                 <td>
                                     <a class="btn btn-primary action-button" href="{{route('admin.customers.show',$customer->id)}}"> View </a>
-                                    <a class="btn btn-success action-button" href="">Call</a>
+                                    {{-- <a class="btn btn-success action-button" href="">Call</a> --}}
                                 </td>
                             </tr>
                         
