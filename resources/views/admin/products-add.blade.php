@@ -85,6 +85,12 @@
                     <p class="error">{{$errors->first('category_id')}}</p>
                 </div>
                
+                 <div class="mb-3">
+                    <span>Trade Price</span>
+                    <input class="form-control" type="text" name="trade_price" id="">
+                    <p class="error">{{$errors->first('trade_price')}}</p>
+                </div>
+
                 <div class="row mb-3">
                     <div class="col-lg-6 col-md-6">
                         <span>Price</span>

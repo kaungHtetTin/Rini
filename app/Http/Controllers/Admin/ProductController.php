@@ -34,6 +34,7 @@ class ProductController extends Controller
             'description'=>'required',
             'category_id'=>'required',
             'price'=>'required',
+            'trade_price'=>'required',
             'discount'=>'required',
         ]);
 
@@ -42,17 +43,19 @@ class ProductController extends Controller
         if($req->hasFile('image')){
             $image = $req->file('image');
             $path = $image->store('images', 'public');
-             
+            
             $product = new Product();
             $product->product_category_id = $req->category_id;
             $product->title = $req->title;
             $product->description = $req->description;
             $product->image_url = $path;
             $product->price = $req->price;
+            $product->trade_price = $req->trade_price;
             $product->discount = $req->discount;
             $product->order_count = 0;
             $product->instock = $instock;
             $product->disable = 0;
+            $product->view = 0;
             $product->save();
 
             return back()->with('msg', 'New product was successfully addeds');
