@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{asset('images/favicon.PNG')}}" type="image/x-icon">
  
   <title>
     {{$page_title}}

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('images/favicon.PNG')}}" type="image/x-icon">
 
     <title>Rini Admin | Login </title>
 
@@ -40,7 +40,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image" style="text-align: center">
-                        <img src="{{asset('images/favicon.png')}}" alt="" srcset="" 
+                        <img src="{{asset('images/favicon.PNG')}}" alt="" srcset="" 
                         style="width:250px;">
                     </div>
                     <div class="col-lg-7">
