@@ -62,7 +62,7 @@
                                 <div>
                                     <div class="title mt-3">{{$blog->title}}</div>
                                     <div class="short">{{$blog->short_description}}</div>
-                                    <div class="date">{{$blog->created_at->diffforHumans()}} . Updated by {{$blog->admin()->name}}</div>
+                                    <div class="date">{{$blog->created_at->diffforHumans()}}</div>
                                     <div class="edit-menu">
                                         <a href="{{route('admin.blogs.edit',$blog->id)}}" class="btn btn-primary">
                                             <i class="fas fa-edit"></i> Edit
