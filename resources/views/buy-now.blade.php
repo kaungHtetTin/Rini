@@ -222,7 +222,7 @@ table tr td{
                 let final_price = price-discount;
                 $('#product_container').append(`
                     <tr>
-                        <td><img src="http://localhost/rini/storage/app/public/${product.image_url}" alt=""></td>
+                        <td><img src="https://www.riniforyou.com/storage/app/public/${product.image_url}" alt=""></td>
                         <td>${product.title}</td>
                         <td width="30px">
                             <div class="minus" onclick="decrease(${product.id})"><i class="fas fa-minus"></i></div>

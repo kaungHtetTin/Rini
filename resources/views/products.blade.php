@@ -80,7 +80,7 @@
                       <div class="col-sm-6 col-6 col-md-4 col-lg-3">
                         <a href="{{route('products-show',$product->id)}}">
                           <div class="btn card product">
-                              <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="" srcset="">
+                              <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="" srcset="">
                               <div class="description">
                                   {{$product->title}} <br>
                                   <strong>{{$product->price}} Ks</strong>

@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div id="image-container">
-                        <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="">
+                        <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="">
                         <span id="btn-select-image" class="btn btn-secondary"><i class="fas fa-edit"></i></span>
                     </div>
                      <div id="canvas-container" class="mb-3" style="display: none">
@@ -242,7 +242,7 @@
                 <div class="image-box">
                     @foreach ($images as $image)
                         <div>
-                            <img src="http://localhost/rini/storage/app/public/{{$image->image_url}}" id="" />
+                            <img src="https://www.riniforyou.com/storage/app/public/{{$image->image_url}}" id="" />
                             <a class="btn btn-secondary" href="#" data-toggle="modal" 
                                 data-target="#delete-modal-{{$image->id}}"><i class="fas fa-trash"></i></a>
                         </div>

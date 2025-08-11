@@ -98,7 +98,7 @@
             $('#product_container').append(`
                 <div class="col-sm-6 col-4 col-md-3 col-lg-3">
                     <div class="btn card product">
-                        <img src="http://localhost/rini/storage/app/public/${product.image_url}" alt="" srcset="">
+                        <img src="https://www.riniforyou.com/storage/app/public/${product.image_url}" alt="" srcset="">
                         <div class="description">
                             ${product.title} <br>
                             <strong>${product.price} Ks</strong>
