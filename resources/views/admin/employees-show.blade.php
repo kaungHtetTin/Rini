@@ -55,7 +55,7 @@
 
         <div class="card my-card">
             <br>
-            <img src="https://www.riniforyou.com/storage/app/public/{{$employee->image_url}}" alt="" srcset="">
+            <img src="http://localhost/rini/storage/app/public/{{$employee->image_url}}" alt="" srcset="">
             <br>
             <div class="name">
                 <h5>{{$employee->name}}</h5>

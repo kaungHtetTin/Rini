@@ -22,11 +22,6 @@ class VoucherController extends Controller
         ]);
 
         if(!$req->hasFile('image')) return ['status'=>'fail'];
-        
-        $trade = false;
-        if(isset($req->trade)){
-            $trade = true;
-        }
 
         $image = $req->file('image');
         $image_url = $image->store('payments', 'public');
@@ -64,16 +59,12 @@ class VoucherController extends Controller
             $quantity = $item['quantity'];
             if($quantity>0){
                 $product = Product::find($item['id']);
-                $price = $product->price;
-                $discount = $product->discount;
-                $discount = $price*$discount/100;
-
-                $final_price = $price - $discount;
-
-                if($trade && $customer->collaborate == 1){
-                    $final_price = $product->trade_price;
-                    $voucher->trade = 1;
-                    $voucher->save();
+                $prices = $product->prices;
+                $final_price = 0;
+                foreach($prices as $price){
+                    if($price->quantity <= $quantity){
+                        $final_price = $price->price;
+                    }
                 }
 
                 $amount = $final_price*$quantity;

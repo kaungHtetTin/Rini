@@ -117,14 +117,27 @@
             <div class="product">
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6" >
-                        <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="">
+                        <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="">
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <div class="info">
                             <div class="title">{{$product->title}} </div>
                             <div class="category"><i>{{$product->product_category->category}}</i></div>
                             <div class="description">{{$product->description}}</div>
-                            <div class="price">{{$product->price}} Ks</div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;"><strong>Quantity</strong></td>
+                                        <td><strong>Price</strong></td>
+                                    </tr>
+                                    @foreach ($product->prices as $price)
+                                        <tr>
+                                            <td>{{$price->quantity}}</td>
+                                            <td>{{$price->price}} ks</td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                             <div> @if ($product->instock==1)
                                  <span class="instock">Instock</span>
                             @endif</div>
@@ -147,7 +160,7 @@
                     <div class="image-box">
                         @foreach ($product->product_images as $image)
                             <div>
-                                <img src="https://www.riniforyou.com/storage/app/public/{{$image->image_url}}" id="" />
+                                <img src="http://localhost/rini/storage/app/public/{{$image->image_url}}" id="" />
                             </div>
                         @endforeach
                     </div>

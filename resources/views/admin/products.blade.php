@@ -74,15 +74,18 @@
                             @if ($product->instock==1)
                                  <span class="instock">Instock</span>
                             @endif
-                            <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="" srcset="">
+                            <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="" srcset="">
                             <div class="description">
                                 {{$product->title}} <br>
-                                <strong>{{$product->price}} Ks</strong> <br>
+                               
                                 {{-- <span>
                                     <i class="fas fa-cart-plus "></i>
                                 </span> --}}
                             </div>
                             <div class="edit-menu">
+                                <a href="{{route('admin.products.prices',$product->id)}}" class="btn btn-warning">
+                                    <i class="fas fa-dollar-sign "></i>
+                                </a>
                                 <a href="{{route('admin.products-edit',$product->id)}}" class="btn btn-primary">
                                     <i class="fas fa-edit"></i>
                                 </a>

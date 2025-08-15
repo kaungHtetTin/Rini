@@ -174,7 +174,7 @@
                     <div class="image-upload-wrap" id="cover_photo_container">
                         <input class="file-upload-input" name="cover_image" id="input_cover_photo" type="file" accept="image/*">
                         <div class="drag-text">
-                            <img src="https://www.riniforyou.com/storage/app/public/{{$blog->image_url}}" id="upload_cover_image"  alt="" style="width: 250px;border-radius:3px;">
+                            <img src="http://localhost/rini/storage/app/public/{{$blog->image_url}}" id="upload_cover_image"  alt="" style="width: 250px;border-radius:3px;">
                             <h4>Select an image to upload</h4>
                         </div>
                     </div>		
@@ -276,7 +276,7 @@
 				},
 				success: function(response) {
 					console.log(response);
-					$('#'+image_id).attr('src',"https://www.riniforyou.com/storage/app/public/"+response);
+					$('#'+image_id).attr('src',"http://localhost/rini/storage/app/public/"+response);
 				},
 				error: function(xhr, status, error) {
 					console.log('Error:', xhr.status, error);

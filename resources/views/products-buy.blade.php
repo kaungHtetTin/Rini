@@ -99,6 +99,9 @@ table tr td{
     <form id="csrf_form" action="" method="post">
         @csrf
     </form>
+    @php
+        $product->prices;
+    @endphp
 
     <section class="shop_section layout_padding">
         <div class="container">
@@ -115,7 +118,6 @@ table tr td{
                                 <th colspan="2">Item</th>
                                 <th colspan="3">Quantity</th>
                                 <th>Price</th>
-                                <th>Discount(%)</th>
                                 <th>Total</th>
                             </thead>
                             <tbody id="product_container">
@@ -171,7 +173,7 @@ table tr td{
                     let name = $('#input_name').val();
                     window.localStorage.setItem('rini_user_phone',phone);
                     window.localStorage.setItem('rini_username',name);
-                    window.localStorage.setItem('rini_cart',"[]");
+                    //window.localStorage.setItem('rini_cart',"[]");
                 }
             });
 
@@ -208,48 +210,44 @@ table tr td{
             setProduct(products);
         })
 
-        function setProduct(products){
+       function setProduct(products){
             $('#product_container').html("")
             products.map((product)=>{
-                let price = product.price;
                 let quantity = product.quantity;
-                let discount = product.discount;
-                discount = (price*discount)/100;
-                let final_price = price-discount;
-                $('#product_container').append(`
-                    <tr>
-                        <td><img src="https://www.riniforyou.com/storage/app/public/${product.image_url}" alt=""></td>
-                        <td>${product.title}</td>
-                        <td width="30px">
-                            <div class="minus" onclick="decrease(${product.id})"><i class="fas fa-minus"></i></div>
-                        </td>
-                        <td align="center" id="quantity_${product.id}">${product.quantity}</td>
-                        <td width="30px"> <div class="plus" onclick="increase(${product.id})"><i class="fas fa-plus"></i></div> </td>
-                        <td>${product.price}</td>
-                        <td>${product.discount}</td>
-                        <td id="total_${product.id}"">${quantity*final_price}</td>
-                    </tr> 
-                `);
+                if(product.prices.length>0){
+                    let selected_price = selectPrice(product);
+                    $('#product_container').append(`
+                        <tr>
+                            <td><img src="http://localhost/rini/storage/app/public/${product.image_url}" alt=""></td>
+                            <td>${product.title}</td>
+                            <td width="30px">
+                                <div class="minus" onclick="decrease(${product.id})"><i class="fas fa-minus"></i></div>
+                            </td>
+                            <td align="center" id="quantity_${product.id}">${product.quantity}</td>
+                            <td width="30px"> <div class="plus" onclick="increase(${product.id})"><i class="fas fa-plus"></i></div> </td>
+                            <td id="price_${product.id}">${selected_price}</td>
+                            <td id="total_${product.id}"">${quantity*selected_price}</td>
+                        </tr> 
+                    `);
+                }
             })
 
             $('#product_container').append(`
                 <tr class="total">
-                    <td colspan="7"><strong>Total</strong></td>
+                    <td colspan="6"><strong>Total</strong></td>
                     <td><span id="total_amount"></span></td>
                 </tr>
             `)
             calculateTotalAmount();
         }
 
-        function increase(id){
+       function increase(id){
             let product = products.find(p => p.id == id);
-            let price = product.price;
             product.quantity = product.quantity + 1;
 
-            let discount = product.discount;
-            discount = (price*discount)/100;
-            let final_price = price-discount;
+            let final_price = selectPrice(product);
         
+            $(`#price_${product.id}`).html(final_price);
             $(`#quantity_${product.id}`).html(product.quantity);
             $(`#total_${product.id}`).html(product.quantity * final_price);
             calculateTotalAmount();
@@ -258,31 +256,50 @@ table tr td{
         function decrease(id){
             let product = products.find(p => p.id == id);
             let price = product.price;
-            if(product.quantity > 1){
+            if(product.quantity > 0){
                 product.quantity = product.quantity - 1;
 
-                let discount = product.discount;
-                discount = (price*discount)/100;
-                let final_price = price-discount;
+                let final_price = selectPrice(product);
 
+                $(`#price_${product.id}`).html(final_price);
                 $(`#quantity_${product.id}`).html(product.quantity);
                 $(`#total_${product.id}`).html(product.quantity * final_price);
                 calculateTotalAmount();
             }
         }
 
+        function selectPrice(product){
+
+            let quantity = product.quantity;
+            
+            let prices = product.prices
+            if(prices.length==0) return 0;
+            var index = prices.findIndex((price)=>{
+                return price.quantity>quantity;
+            });
+
+            if(index == -1){
+                return prices[prices.length-1].price;
+            }
+
+            if(index>0) index--;
+            return (prices[index].price);
+           
+        }
+
         function calculateTotalAmount(){
             let total = 0;
             products.forEach(product => {
-                let price = product.price;
+
                 let quantity = product.quantity;
-                let discount = product.discount;
-                discount = (price*discount)/100;
-                let final_price = price-discount;
+             
+                let final_price = selectPrice(product);
+                console.log(final_price);
 
                 total += product.quantity* final_price;
             });
-            $('#total_amount').html(total +' ks')
+            $('#total_amount').html(total +' ks');
+            return total;
         }
 
         function validate(){

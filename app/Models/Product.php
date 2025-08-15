@@ -16,6 +16,10 @@ class Product extends Model
         return $this->hasMany(ProductImage::class);
     }
 
+    public function prices(){
+        return $this->hasMany(Price::class);
+    }
+
     public function admin(){
         $admin_id = $this->action_taken;
         $admin = User::find($admin_id);

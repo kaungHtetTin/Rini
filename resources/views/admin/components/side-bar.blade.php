@@ -32,11 +32,11 @@
             <span>Customers</span></a>
     </li>
 
-    <li class="nav-item @php if($page_title == 'Collaborators') echo 'active' @endphp">
+    {{-- <li class="nav-item @php if($page_title == 'Collaborators') echo 'active' @endphp">
         <a class="nav-link" href="{{route('admin.collaborators')}}">
             <i class="fas fa-fw fa-handshake"></i>
             <span>Collaborators</span></a>
-    </li>
+    </li> --}}
 
     @if (Auth::user()->check_access_level(2))
         <!-- Divider -->

@@ -74,7 +74,7 @@
         <div class="card" style="padding:20px;">
             <span style="margin-bottom: 3px;">Profile (Square)</span>
             <div id="image-container">
-                        <img src="https://www.riniforyou.com/storage/app/public/{{$employee->image_url}}" alt="">
+                        <img src="http://localhost/rini/storage/app/public/{{$employee->image_url}}" alt="">
                 <span id="btn-select-image" class="btn btn-secondary"><i class="fas fa-edit"></i></span>
             </div>
             <div id="canvas-container" class="mb-3" style="display: none">

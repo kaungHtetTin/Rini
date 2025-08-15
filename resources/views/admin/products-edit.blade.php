@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div id="image-container">
-                        <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="">
+                        <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="">
                         <span id="btn-select-image" class="btn btn-secondary"><i class="fas fa-edit"></i></span>
                     </div>
                      <div id="canvas-container" class="mb-3" style="display: none">
@@ -149,18 +149,6 @@
                         <tr>
                             <td>Category </td>
                             <td>{{$product->product_category->category}} </td>
-                        </tr>
-                        <tr>
-                            <td>Trade Price </td>
-                            <td>{{$product->trade_price}} ks</td>
-                        </tr>
-                        <tr>
-                            <td>List Price </td>
-                            <td>{{$product->price}} ks</td>
-                        </tr>
-                        <tr>
-                            <td>Discount </td>
-                            <td>{{$product->discount}} %</td>
                         </tr>
                         <tr>
                             <td>Instock </td>
@@ -202,24 +190,6 @@
                 </div>
                
                 <div class="mb-3">
-                    <span>Trade Price</span>
-                    <input class="form-control" type="text" name="trade_price" id="" value="{{$product->trade_price}}">
-                    <p class="error">{{$errors->first('trade_price')}}</p>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-md-6">
-                        <span>List Price</span>
-                        <input class="form-control" type="text" name="price" id="" value="{{$product->price}}">
-                        <p class="error">{{$errors->first('price')}}</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <span>Discount (In percent)</span>
-                        <input class="form-control" type="text" name="discount" id="" value="{{$product->discount}}">
-                        <p class="error">{{$errors->first('discount')}}</p>
-                    </div>
-                </div>
-                <div class="mb-3">
                     <label for="instock">Instock</label>
                     <input class="" type="checkbox" name="instock" id="" {{$product->instock == 1 ? 'checked':''}}>
                 </div>
@@ -242,7 +212,7 @@
                 <div class="image-box">
                     @foreach ($images as $image)
                         <div>
-                            <img src="https://www.riniforyou.com/storage/app/public/{{$image->image_url}}" id="" />
+                            <img src="http://localhost/rini/storage/app/public/{{$image->image_url}}" id="" />
                             <a class="btn btn-secondary" href="#" data-toggle="modal" 
                                 data-target="#delete-modal-{{$image->id}}"><i class="fas fa-trash"></i></a>
                         </div>

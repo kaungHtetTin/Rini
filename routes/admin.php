@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PaymentMethodController;
 use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\PriceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,11 @@ Route::middleware('auth')->group(function () {
         Route::put('/products/edit/{id}',[ProductController::class,'modify'])->name('admin.products-edit');
         Route::put('/products/edit/{id}/manage-status',[ProductController::class,'manageStatus'])->name('admin.products-manage-status');
         Route::delete('/products/{pid}/images/delete/{iid}',[ProductController::class,'deleteImage'])->name('admin.products.images.delete');
+
+        Route::get('/products/{pid}/prices',[PriceController::class,'index'])->name('admin.products.prices');
+        Route::post('/prices/add',[PriceController::class,'store'])->name('admin.prices.add');
+        Route::delete('/prices/{id}',[PriceController::class,'destroy'])->name('admin.prices.destroy');
+
     });
 
     Route::middleware('access_sale')->group(function () {

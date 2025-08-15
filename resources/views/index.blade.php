@@ -109,16 +109,16 @@
               <a href="{{route('products-show',$product->id)}}" style="text-decoration: none">
                 <div class="btn card product">
                     
-                    <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="" srcset="">
+                    <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="" srcset="">
                     <div class="description">
                         {{$product->title}} <br>
-                        <strong>{{$product->price}} Ks</strong>
                         <span class="cart">
                             <i class="fas fa-cart-plus "></i>
                         </span>
                         @if ($product->instock==1)
                           <span class="instock">Instock</span>
                         @endif
+                        <br>
                     </div>
                 </div>
               </a>
@@ -218,7 +218,7 @@
                   <div class="card" style="margin-bottom: 5px;">
                       <a href="{{route('blogs.show',$blog->id)}}" style="text-decoration: none">
                           <div class="my-card">
-                              <img src="https://www.riniforyou.com/storage/app/public/{{$blog->image_url}}" alt=""> 
+                              <img src="http://localhost/rini/storage/app/public/{{$blog->image_url}}" alt=""> 
                               <div>
                                   <div class="title mt-3">{{$blog->title}}</div>
                                   <div class="short">{{$blog->short_description}}</div>

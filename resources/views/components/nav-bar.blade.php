@@ -55,9 +55,9 @@
                         Blogs
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link @php if($page_title == 'Collaboration') echo 'active' @endphp" href="{{route('collaborate')}}">Collaboration</a>
-                </li>
+                </li> --}}
             </ul>
             <div class="user_option">
                  
@@ -105,14 +105,14 @@
                         <div class="col-md-7">
                         <div class="detail-box">
                             <h1>
-                            Let's <br> Collaborate 
+                            Rini's Goal!
                             
                             </h1>
                             <p>
-                            Looking to partner with like-minded collaborators who share our passion for high-quality, affordable fashion. Join us in delivering the latest trends with exceptional service, and let's create something great together!
+                            To become the leading clothing store in offering high-quality, affordable fashion with the latest designs, while providing exceptional customer service that ensures every shopper feels valued and satisfied.
                             </p>
-                            <a href="{{route('collaborate')}}">
-                                Collaborate
+                            <a href="{{route('buy-now')}}">
+                                Buy Now
                             </a>
                         </div>
                         </div>

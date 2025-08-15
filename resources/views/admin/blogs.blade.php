@@ -58,7 +58,7 @@
                     <div class="card" style="margin-bottom: 5px;">
                         <a href="{{route('admin.blogs.show',$blog->id)}}" style="text-decoration: none">
                             <div class="my-card">
-                                <img src="https://www.riniforyou.com/storage/app/public/{{$blog->image_url}}" alt=""> 
+                                <img src="http://localhost/rini/storage/app/public/{{$blog->image_url}}" alt=""> 
                                 <div>
                                     <div class="title mt-3">{{$blog->title}}</div>
                                     <div class="short">{{$blog->short_description}}</div>

@@ -33,9 +33,6 @@ class ProductController extends Controller
             'title'=>'required',
             'description'=>'required',
             'category_id'=>'required',
-            'price'=>'required',
-            'trade_price'=>'required',
-            'discount'=>'required',
         ]);
 
         $instock = $req->instock == 'on' ? 1 : 0;
@@ -49,16 +46,15 @@ class ProductController extends Controller
             $product->title = $req->title;
             $product->description = $req->description;
             $product->image_url = $path;
-            $product->price = $req->price;
-            $product->trade_price = $req->trade_price;
-            $product->discount = $req->discount;
             $product->order_count = 0;
             $product->instock = $instock;
             $product->disable = 0;
             $product->view = 0;
             $product->save();
-
-            return back()->with('msg', 'New product was successfully addeds');
+            
+            return redirect("admin/products/".$product->id."/prices");
+            
+           // return back()->with('msg', 'New product was successfully addeds');
         }
 
         return back()->with('error', 'Job Fail! An expected error.');
@@ -86,9 +82,6 @@ class ProductController extends Controller
             'title'=>'required',
             'description'=>'required',
             'category_id'=>'required',
-            'price'=>'required',
-            'trade_price'=>'required',
-            'discount'=>'required',
         ]);
 
         $image_url = $product->image_url;
@@ -103,9 +96,6 @@ class ProductController extends Controller
         $product->title = $req->title;
         $product->description = $req->description;
         $product->image_url = $image_url;
-        $product->price = $req->price;
-        $product->trade_price = $req->trade_price;
-        $product->discount = $req->discount;
         $product->order_count = 0;
         $product->view = 0;
         $product->instock = $instock;
@@ -132,4 +122,6 @@ class ProductController extends Controller
         $image->delete();
         return back()->with('imageMsg','The image was successfully deleted');
     }
+
+    
 }

@@ -9,6 +9,7 @@ use App\Models\AccessLevel;
 use App\Models\FinancialType;
 use App\Models\FinancialCategory;
 use App\Models\MobileBanking;
+use App\Models\Setting;
 
 use Illuminate\Support\Str;
 
@@ -23,7 +24,7 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'name' => 'Super Admin',
-            'email' => 'super@rini.com',
+            'email' => 'super@riniforyou.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
@@ -53,6 +54,17 @@ class DatabaseSeeder extends Seeder
         MobileBanking::create(['bank'=>'KBZ pay','icon'=>'images/payment-kbz-pay.jpg']);
         MobileBanking::create(['bank'=>'Wave pay','icon'=>'images/payment-wave-pay.jpg']);
         MobileBanking::create(['bank'=>'CB pay','icon'=>'images/payment-cb-pay.png']);
-        MobileBanking::create(['bank'=>'AYA pay','icon'=>'images/payment-aya-pay.png']);
+        MobileBanking::create(['bank'=>'AYA pay','icon'=>'images/payment-aya-pay.png']);//
+        MobileBanking::create(['bank'=>'KBZ Bank Account','icon'=>'images/kbz_bank.png']);
+
+        Setting::create(['content'=>'address','value'=>"Not available"]);
+        Setting::create(['content'=>'email','value'=>"Not available"]);
+        Setting::create(['content'=>'phone','value'=>"Not available"]);
+
+        Setting::create(['content'=>'facebook','value'=>""]);
+        Setting::create(['content'=>'youtube','value'=>""]);
+        Setting::create(['content'=>'instagram','value'=>""]);
+        Setting::create(['content'=>'tiktok','value'=>""]);
+ 
     }
 }

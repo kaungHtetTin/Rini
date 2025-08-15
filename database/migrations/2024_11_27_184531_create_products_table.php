@@ -19,9 +19,6 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image_url');
-            $table->integer('price');
-            $table->integer('trade_price');
-            $table->integer('discount'); // in percent
             $table->integer('order_count')->default(0)->nullable();
             $table->integer('view')->default(0)->nullable();
             $table->boolean('instock');

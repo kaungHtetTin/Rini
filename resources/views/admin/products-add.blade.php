@@ -84,25 +84,6 @@
                     </select>
                     <p class="error">{{$errors->first('category_id')}}</p>
                 </div>
-               
-                 <div class="mb-3">
-                    <span>Trade Price</span>
-                    <input class="form-control" type="text" name="trade_price" id="">
-                    <p class="error">{{$errors->first('trade_price')}}</p>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-lg-6 col-md-6">
-                        <span>Price</span>
-                        <input class="form-control" type="text" name="price" id="">
-                        <p class="error">{{$errors->first('price')}}</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <span>Discount (In percent)</span>
-                        <input class="form-control" type="text" name="discount" id="" value="0">
-                        <p class="error">{{$errors->first('discount')}}</p>
-                    </div>
-                </div>
                 <div class="mb-3">
                     <label for="instock">Instock</label>
                     <input class="" type="checkbox" name="instock" id="">

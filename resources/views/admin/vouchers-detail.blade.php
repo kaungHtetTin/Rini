@@ -40,7 +40,7 @@
                     
             </div>
             <div style="margin-bottom: 20px;">
-                <a class="btn btn-primary action-button" href="https://www.riniforyou.com/storage/app/public/{{$voucher->screenshot_url}}"> <i class="fab fa-amazon-pay"></i> Check Payment</a>
+                <a class="btn btn-primary action-button" href="http://localhost/rini/storage/app/public/{{$voucher->screenshot_url}}"> <i class="fab fa-amazon-pay"></i> Check Payment</a>
                 @if ($voucher->payment_verified==0)
                     <a id="btn_payment_verified" class="btn btn-success action-button" href="#"> <i class="fas fa-check-circle"></i> Verified</a>
                 @endif

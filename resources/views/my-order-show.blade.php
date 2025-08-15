@@ -150,7 +150,7 @@ table tr td{
                                     $total_amount +=$amount;
                                 @endphp
                                 <tr>
-                                    <td><img src="https://www.riniforyou.com/storage/app/public/{{$item->product->image_url}}" alt=""></td>
+                                    <td><img src="http://localhost/rini/storage/app/public/{{$item->product->image_url}}" alt=""></td>
                                     <td>{{$item->product->title}}</td>
                                     <td>{{$item->quantity}}</td>
                                     <td>{{$item->price}} ks</td>

@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-lg-8 col-md-7 col-sm-12">
                 <div class="blog">
-                    <img src="https://www.riniforyou.com/storage/app/public/{{$blog->image_url}}" alt="">
+                    <img src="http://localhost/rini/storage/app/public/{{$blog->image_url}}" alt="">
                     <div class="title">{{$blog->title}}</div>
                     <div class="date">{{$blog->created_at->diffforHumans()}}</div>
                     <div class="short">{{$blog->short_description}}</div>
@@ -62,7 +62,7 @@
                     <div class="card" style="margin-bottom: 5px;">
                         <a href="{{route('admin.blogs.show',$lblog->id)}}" style="text-decoration: none">
                             <div class="latest-blog">
-                                <img src="https://www.riniforyou.com/storage/app/public/{{$lblog->image_url}}" alt=""> 
+                                <img src="http://localhost/rini/storage/app/public/{{$lblog->image_url}}" alt=""> 
                                 <div>
                                     <div class="title">{{$lblog->title}}</div>
                                     <div class="date">{{$lblog->created_at->diffforHumans()}}</div>
