@@ -117,7 +117,7 @@
             <div class="product">
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6" >
-                        <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="">
+                        <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="">
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <div class="info">
@@ -160,7 +160,7 @@
                     <div class="image-box">
                         @foreach ($product->product_images as $image)
                             <div>
-                                <img src="http://localhost/rini/storage/app/public/{{$image->image_url}}" id="" />
+                                <img src="https://www.riniforyou.com/storage/app/public/{{$image->image_url}}" id="" />
                             </div>
                         @endforeach
                     </div>

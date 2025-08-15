@@ -197,7 +197,7 @@
                                 <a href="{{route('admin.products-edit',$dproduct->product_id)}}" style="text-decoration: none">
                                     <div class="demanding-product">
                                         <div class="image">
-                                            <img src="http://localhost/rini/storage/app/public/{{$dproduct->product->image_url}}" alt="" srcset="">
+                                            <img src="https://www.riniforyou.com/storage/app/public/{{$dproduct->product->image_url}}" alt="" srcset="">
                                         </div>
                                         <div class="title">{{$dproduct->product->title}}</div>
                                         <div class="quantity" style="font-size: 10px;"> {{$dproduct->total_quantity}}</div>

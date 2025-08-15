@@ -74,7 +74,7 @@
                             @if ($product->instock==1)
                                  <span class="instock">Instock</span>
                             @endif
-                            <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="" srcset="">
+                            <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="" srcset="">
                             <div class="description">
                                 {{$product->title}} <br>
                                

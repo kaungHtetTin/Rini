@@ -149,7 +149,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div id="image-container">
-                        <img src="http://localhost/rini/storage/app/public/{{$product->image_url}}" alt="">
+                        <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">

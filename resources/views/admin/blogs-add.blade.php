@@ -278,7 +278,7 @@
 				},
 				success: function(response) {
 					console.log(response);
-					$('#'+image_id).attr('src',"http://localhost/rini/storage/app/public/"+response);
+					$('#'+image_id).attr('src',"https://www.riniforyou.com/storage/app/public/"+response);
 				},
 				error: function(xhr, status, error) {
 					console.log('Error:', xhr.status, error);
