@@ -6,7 +6,7 @@
             width: 30px;
             height:30px;
             border-radius: 5px;
-            border: 1px solid #4e73df;
+            border: 1px solid #e83e8c;
         }
         table tr td{
             padding:7px;
@@ -16,20 +16,20 @@
             cursor: pointer;
             height:30px;
             width: 30px;
-            border: 1px solid #4e73df;
+            border: 1px solid #e83e8c;
             text-align: center;
             border-radius: 50%;
-            color: #4e73df;
+            color: #e83e8c;
             padding-top:3px;
         }
         .plus{
             cursor: pointer;
             height:30px;
             width: 30px;
-            border: 1px solid #4e73df;
+            border: 1px solid #e83e8c;
             text-align: center;
             border-radius: 50%;
-            color: #4e73df;
+            color: #e83e8c;
             padding-top:3px;
         }
 
@@ -38,9 +38,9 @@
             outline: none;
             border: none;
             color: #ffffff;
-            background: #4e73df;
+            background: #e83e8c;
             margin-top: 15px;
-            border: 1px solid #4e73df;
+            border: 1px solid #e83e8c;
             text-transform: uppercase;
             border-radius: 5px;
             margin: 7px;
@@ -49,8 +49,8 @@
 
         .buy:hover {
             padding: 8px 35px;
-            outline: #4e73df;
-            color: #4e73df;
+            outline: #e83e8c;
+            color: #e83e8c;
             margin-top: 15px;
             text-transform: uppercase;
             border-radius: 5px;
@@ -59,9 +59,9 @@
             cursor: pointer;
         }
         .total{
-            border: 1px solid #4e73df;
+            border: 1px solid #e83e8c;
             border-radius: 7px;
-            background: #4e73df;
+            background: #e83e8c;
             color: white;
         }
 

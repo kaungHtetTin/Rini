@@ -24,7 +24,7 @@
         }
 
         .demanding-product:hover{
-          background: #dbe7ff;
+          background: #ffdbf1;
         }
 
         .demanding-product .image img{
@@ -271,14 +271,14 @@
                     {
                         label: "Sale",
                         lineTension: 0.3,
-                        backgroundColor: "#4e73df10",
-                        borderColor: "#4e73df",
+                        backgroundColor: "#e83e8c10",
+                        borderColor: "#e83e8c",
                         pointRadius: 3,
-                        pointBackgroundColor: "#4e73df",
-                        pointBorderColor: "#4e73df",
+                        pointBackgroundColor: "#e83e8c",
+                        pointBorderColor: "#e83e8c",
                         pointHoverRadius: 3,
-                        pointHoverBackgroundColor: "#4e73df",
-                        pointHoverBorderColor: "#4e73df",
+                        pointHoverBackgroundColor: "#e83e8c",
+                        pointHoverBorderColor: "#e83e8c",
                         pointHitRadius: 10,
                         pointBorderWidth: 2,
                         data: dataSale,

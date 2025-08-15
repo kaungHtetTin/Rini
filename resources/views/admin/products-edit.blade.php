@@ -99,7 +99,7 @@
         #progress{
             height:5px;
             width: 0%;
-            background: #4e73df;
+            background: #e83e8c;
             border-radius: 3px;
         }
 

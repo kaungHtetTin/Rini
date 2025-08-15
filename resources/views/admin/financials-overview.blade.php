@@ -38,7 +38,7 @@
                         </div>
                         <div class="mt-4 small">
                             <span class="mr-2">
-                                <i class="fas fa-circle" style="color:#4e73df "></i> Sale
+                                <i class="fas fa-circle" style="color:#e83e8c "></i> Sale
                             </span>
                             <span class="mr-2">
                                 <i class="fas fa-circle" style="color:#e74a3b "></i> Cost
@@ -61,7 +61,7 @@
                     <!-- Card Body -->
                     <div class="card-body">
                          
-                        <h6 class="mt-4"> <i class="fas fa-circle" style="color:#4e73df "></i> Sales:</h6>
+                        <h6 class="mt-4"> <i class="fas fa-circle" style="color:#e83e8c "></i> Sales:</h6>
                         <div class="small" style="display: flex">
                             
                             <table class="" style="flex: 1">
@@ -269,14 +269,14 @@
                         {
                             label: "Sale",
                             lineTension: 0.3,
-                            backgroundColor: "#4e73df10",
-                            borderColor: "#4e73df",
+                            backgroundColor: "#e83e8c10",
+                            borderColor: "#e83e8c",
                             pointRadius: 3,
-                            pointBackgroundColor: "#4e73df",
-                            pointBorderColor: "#4e73df",
+                            pointBackgroundColor: "#e83e8c",
+                            pointBorderColor: "#e83e8c",
                             pointHoverRadius: 3,
-                            pointHoverBackgroundColor: "#4e73df",
-                            pointHoverBorderColor: "#4e73df",
+                            pointHoverBackgroundColor: "#e83e8c",
+                            pointHoverBorderColor: "#e83e8c",
                             pointHitRadius: 10,
                             pointBorderWidth: 2,
                             data: dataSale,
@@ -386,7 +386,7 @@
     <script>
         {
             let colorArr = [
-                "#4e73df",
+                "#e83e8c",
                 "#36b9cc",
                 "#1cc88a",
                 "#e74a3b",
@@ -461,7 +461,7 @@
     <script>
         {
             let colorArr = [
-                "#4e73df",
+                "#e83e8c",
                 "#36b9cc",
                 "#1cc88a",
                 "#e74a3b",
