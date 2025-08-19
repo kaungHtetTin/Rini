@@ -15,6 +15,10 @@ class Voucher extends Model
         return $this->hasMany(VoucherItem::class);
     }
 
+    public function voucher_attachments(){
+        return $this->hasMany(VoucherAttachment::class);
+    }
+
     public function admin(){
         $admin_id = $this->action_taken;
         $admin = User::find($admin_id);

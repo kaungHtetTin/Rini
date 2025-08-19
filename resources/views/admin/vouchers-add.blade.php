@@ -117,7 +117,6 @@
         </div>
 
          <section class="contact_section ">
-                     
             <form action="#">
                 <span class="error" style="display:none" id="item_quantity_error">Define quantity for one item at lease.</span>
                 <table style="width:100%;margin-bottom:20px;s">

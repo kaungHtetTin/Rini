@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PaymentMethodController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\PriceController;
+use App\Http\Controllers\Admin\VoucherAttachmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +69,9 @@ Route::middleware('auth')->group(function () {
         Route::put('/vouchers/{id}/payment_verified',[VoucherController::class,'payment_verified'])->name('admin.vouchers.payment_verified');
         Route::put('/vouchers/{id}/delivered',[VoucherController::class,'delivered'])->name('admin.vouchers.delivered');
         Route::delete('/vouchers/{id}',[VoucherController::class,'destroy'])->name('admin.vouchers.delete');
+
+        Route::post('/voucher-attachments/add',[VoucherAttachmentController::class,'store'])->name('admin.voucherattachment.store');
+        Route::delete('/voucher-attachments/{id}',[VoucherAttachmentController::class,'destroy'])->name('admin.voucherattachment.destroy');
     });
 
     Route::middleware('access_employee')->group(function () {

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image_url');
             $table->integer('order_count')->default(0)->nullable();
+            $table->integer('left_count')->default(0)->nullable();
             $table->integer('view')->default(0)->nullable();
             $table->boolean('instock');
             $table->boolean('disable')->default(false)->nullable();
