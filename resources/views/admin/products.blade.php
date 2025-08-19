@@ -51,6 +51,17 @@
             margin:5px;
             border:2px solid white;
         }
+        .product .left_count{
+            background: green;
+            padding:4px;
+            border-radius: 10px;
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            margin:5px;
+            right: 5px;
+            border:2px solid white;
+        }
     </style>
     <div class="container-fluid">
         <!-- Page Heading -->
@@ -72,15 +83,12 @@
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card product" style="{{$product->disable == 1 ? 'background:#ddd':''}}">
                             @if ($product->instock==1)
-                                 <span class="instock">Instock</span>
+                                <span class="instock">Instock</span>
                             @endif
+                                <span class="left_count">{{$product->left_count}}</span>
                             <img src="https://www.riniforyou.com/storage/app/public/{{$product->image_url}}" alt="" srcset="">
                             <div class="description">
                                 {{$product->title}} <br>
-                               
-                                {{-- <span>
-                                    <i class="fas fa-cart-plus "></i>
-                                </span> --}}
                             </div>
                             <div class="edit-menu">
                                 <a href="{{route('admin.products.prices',$product->id)}}" class="btn btn-warning">
@@ -100,7 +108,6 @@
                                         <i class="fas fa-check"></i>
                                     </a>
                                 @endif
-                                
                             </div>
                         </div>
                         <br>

@@ -33,6 +33,7 @@ class ProductController extends Controller
             'title'=>'required',
             'description'=>'required',
             'category_id'=>'required',
+            'left_count'=>'required',
         ]);
 
         $instock = $req->instock == 'on' ? 1 : 0;
@@ -47,6 +48,7 @@ class ProductController extends Controller
             $product->description = $req->description;
             $product->image_url = $path;
             $product->order_count = 0;
+            $product->left_count = $req->left_count;
             $product->instock = $instock;
             $product->disable = 0;
             $product->view = 0;
@@ -82,6 +84,7 @@ class ProductController extends Controller
             'title'=>'required',
             'description'=>'required',
             'category_id'=>'required',
+            'left_count'=>'required',
         ]);
 
         $image_url = $product->image_url;
@@ -97,6 +100,7 @@ class ProductController extends Controller
         $product->description = $req->description;
         $product->image_url = $image_url;
         $product->order_count = 0;
+        $product->left_count = $req->left_count;
         $product->view = 0;
         $product->instock = $instock;
         $product->disable = 0;

@@ -76,6 +76,12 @@
                 </div>
 
                 <div class="mb-3">
+                    <span>Product Left Count</span>
+                    <input class="form-control" type="text" name="left_count" id="">
+                    <p class="error">{{$errors->first('left_count')}}</p>
+                </div>
+
+                <div class="mb-3">
                     <span>Select a category</span> <a href="{{route('admin.product-categories')}}" class="btn btn-primary add">Add New Category</a>
                     <select class="form-control" name="category_id" id="">
                         @foreach ($categories as $category)
